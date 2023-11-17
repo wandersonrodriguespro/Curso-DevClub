@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    margin: 44px 0 144px 76px;
+}
+
+header a {
+    color: #989D9C;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    cursor: pointer;
+    margin-right: 23px;
+}
+
+header button {
+    border-radius: 20.5px;
+    background: #665AE1;
+    width: 130px;
+    height: 41px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.img-logo {
+    width: 568px;
+    height: 500px;
+    margin-left: 125px;
+    display: inline-block;
+}
+
+.content-header {
+    display: inline-block;
+    margin: 0 0 243px 86px;
+}
+
+.content-header h1 {
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 122px;
+    color: #515151;
+}
+
+.content-header h2 {
+    color: #515151;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 71px;
+}
+
+.content-header p {
+    color: #848484;
+    font-size: 24px;
+    font-weight: 400;
+    width: 515px;
+    margin: 32px 0px 65px 0px;
+}
+
+.content-header button{
+    border-radius: 30px;
+    background: #ADFF00;
+    width: 239px;
+    height: 64px;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+@media screen and (max-width: 810px) {
+   
+    header {
+        display: none;
+    }
+
+    .img-logo {
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 149px 22px 0 14px;
+    }
+    .content-header{
+        display: block;
+        margin: 24px auto;
+        padding-bottom: 133px;
+        text-align: center;
+    }
+
+    .content-header h1 {
+        font-size: 50px;
+        line-height: normal;
+    }
+
+    .content-header h2 {
+        font-size:  30px;
+        line-height: normal;
+    }
+
+    .content-header p {
+        display: none;
+    }
+
+    .content-header button {
+        margin-top: 17px
+    }
+}

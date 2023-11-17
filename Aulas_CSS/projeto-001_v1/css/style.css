@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    max-width: 1690px;
+    margin: 0 auto;
+    padding: 40px 3%;
+}
+
+/* MENU */
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    font-weight: 600;
+}
+
+nav ul{ 
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: #989D9C;
+}
+
+nav button{
+    width: 130px;
+    height: 41px;
+    border-radius: 50px;
+    background-color: #665AE1;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* HEADER */
+
+.section-header{
+    display: flex;
+    margin: 70px 15px;
+    gap: 50px;
+}
+
+.img-header {
+    width: 50%;
+}
+.img-header img{
+    width: 100%
+}
+
+.text-header{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.text-header h1{
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 100px;
+    text-align: left;
+}
+
+.text-header h2{
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 71px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.text-header p{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.text-header button{
+    border-radius: 30px;
+    background: #ADFF00;
+    width: 239px;
+    height: 64px;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .text-header h1{
+        font-size: 80px;
+    }
+
+    .text-header h2 {
+        font-size: 38px;
+    }
+
+    .text-header p {
+        font-size: 18px;
+    }
+
+    .text-header button {
+        font-size: 18px;
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .section-header {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .img-header{
+        margin: auto;
+        width: 100%;
+    }
+
+    .text-header {
+        margin: auto;
+        width: 100%;
+        
+    }
+
+    .text-header h1 {
+        font-size: 50px;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .text-header h2 {
+        font-size: 30px;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .text-header p {
+        display: none;
+    }
+
+    .text-header button{
+        margin-top: 20px;
+        margin:7px auto;
+    }
+}

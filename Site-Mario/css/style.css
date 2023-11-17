@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bg-header {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-header video {
+    position: fixed;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.masc-header {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+.content-header {
+    max-width: 40%;
+}
+
+.logo-mario {
+    width: 300px;
+}
+
+.content-header p {
+    color: white;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+button, form button {
+    height: 40px;
+    width: 200px;
+    background: #C51111;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.imagem-mario-luigi {
+    height: 600px;
+}
+
+.fale-conosco {
+    max-width: 350px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    position: fixed;
+    left: -420px;
+    transition: left 1s linear;
+    z-index: 4;
+}
+
+form {
+    box-shadow: 0 0px 30px 11px #8b87877a;
+    width: 350px;
+}
+
+.btn-close-Form{
+    right: 10px;
+    position: absolute;
+    top: 10px;
+    background: #C51111;
+    padding: 3px 6px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+input {
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    outline-color: chartreuse;
+}
+
+textarea {
+    height: 150px;
+    width: auto;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding: 10px;
+    outline-color: chartreuse;
+}
+
+form button {
+    margin: 0 auto;
+}
+
+.mascara-form {
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+.closePopup {
+    right: 10px;
+    position: absolute;
+    top: 10px;
+    background: white;
+    padding: 2px 7px;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+}
+
+.mascara-alerta {
+    z-index: 4;
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(10, 12, 16, 0.4);
+}
+
+.alert {
+    width: 450px;
+    height: 144px;
+    position: fixed;
+    top: calc(50% - (144px/2));
+    left: calc(50% - 225px);
+    background-color: #C51111;
+    padding: 40px 50px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: 800;
+    z-index: 20;
+    box-shadow: 0 0 45px -7px #ffffff69;
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    body {
+        flex-wrap: wrap
+    }
+
+    .content-header {
+        max-width: 100%;
+        padding: 40px 4%;
+        text-align: center;
+    }
+
+    .logo-mario {
+        width: 90%;
+    }
+
+    .content-header p {
+        font-size: 16px;
+    }
+
+    .imagem-mario-luigi {
+        height: auto;
+        width: 100%;
+        /* position: absolute; */
+    }
+
+    textarea {
+        width: auto;
+    }
+
+    .alert {
+        width: 300px;
+        height: auto;
+        left: calc(50% - 150px);
+        padding: 20px;
+        font-size: 15px;
+    }
+
+
+
+}

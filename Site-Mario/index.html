@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Super Mario</title>
+</head>
+<body>
+
+    <div class="bg-header">
+        <video src="img/video.mp4" autoplay muted loop></video>
+        <div class="masc-header"></div>
+    </div>
+
+    <section class="content-header">
+        
+        <img class="logo-mario" src="img/logo.png" alt="Imagem da logo usada no filme do mario, a logo é composta somente por texto que alterna entre as cores vermelho, verde, amarelo e azul o texto que esta escrito é The Super Mario Bros.">
+        
+        <p>Encanadores Mario & Luigi - Resolvendo Saus Problemas Com Estilo!</p>
+        
+        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+
+        <button class="contact-form" onclick="contactForm()">Fale Conosco</button>
+
+    </section>
+
+    <img class="imagem-mario-luigi" src="img/mario.png" alt="Imagem do Mario e Luigi">
+
+    <form class="fale-conosco" action="https://formsubmit.co/bomag61297@rdluxe.com" method="POST" id="actionSubmit">
+        
+        <h2>Fale Conosco</h2>
+        
+        <p class="btn-close-Form" onclick="closeForm()">X</p>
+        
+        <input class="input-nome" placeholder="Seu nome" type="text" name="nome">
+        
+        <input class="input-tel" placeholder="Seu telefone" type="tel" name="telefone">
+        
+        <textarea class="input-info" placeholder="Digite seu problema aqui" name="info"></textarea>
+        
+        <button type="button" onclick="submitForm()">Enviar Formulário</button>
+    </form>
+
+    <div class="mascara-form"></div>
+
+    <div class="alert">
+        
+        <p>Um ou mais campo do formulário está vazio, por favor preencha as informações corretas.</p>
+        <p class="closePopup" onclick= "closePopup()">X</p>
+    </div>
+    <div class="mascara-alerta"></div>
+   
+</body>
+
+<script src="js/script.js"></script>
+</html>

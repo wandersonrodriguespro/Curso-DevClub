@@ -145,7 +145,7 @@ main img {
     .content-header p {
         font-size: 18px;
         line-height: 33px;
-        max-width: 304px;
+        max-width: 80%;
         margin: 45px auto;
         padding: 2%;
     }

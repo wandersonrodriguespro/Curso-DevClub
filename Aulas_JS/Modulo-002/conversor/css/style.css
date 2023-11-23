@@ -9,7 +9,37 @@
 }
 
 body {
-    background-color: #8A51FC;;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    gap: 15px;
+}
+
+.title img {
+    width: 90px;
+}
+
+.blur {
+    background-image: url("../assets/bigstock-Currency-Trade-Decision-113860778.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .img-logo {
@@ -19,28 +49,36 @@ body {
 }
 
 main {
-    width: 375px;
+    width: 70%;
     border-radius: 20px;
-    background: #F4F4F4;
+    border: 3px solid #ffffffd8;
+    background: rgba(0, 0, 0, 0.2);
     margin: 40px auto;
-    padding: 44px 24px 24px;
+    padding: 20px 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    max-width: 900px;
+    backdrop-filter: blur(5px);
+}
+
+
+.content {
+ display: flex;
+ justify-content: center;
+ gap: 30px;
+}
+
+.section-input, .section-box-converted {
+    min-width: 50%;
 }
 
 label {
-    color: #777;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-label b {
-    color: #777;
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 30px;
+    width: 100%;
 }
 
 select, input {
@@ -56,14 +94,22 @@ select, input {
     cursor: pointer;
 }
 
-
 input::placeholder {
-    font-size: 18px;
+    font-size: 16px;
+}
+
+input:focus::placeholder {
+    color: #ffffff;
+}
+
+.option {
+    font-weight: 700;
+    padding: 10px;
 }
 
 button {
     width: 100%;
-    background: #772FD3;
+    background: #00BE28;
     border: 0;
     color: #ffffff;
     height: 48px;
@@ -83,12 +129,12 @@ button:active {
 
 section {
     border-radius: 20px;
-    border: 1px solid #772FD3;
+    border: 1px solid #ffffffd8;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding: 13px;
+    padding: 20px;
 }
 
 .currency-box {
@@ -99,12 +145,47 @@ section {
 }
 
 .currency {
-    color: #777777;
-    font-size: 14;
+    color: #ffffff;
+    font-size: 17px;
 }
 
 .currency-value {
-    color: #555555;
+    color: #ffffff;
     font-weight: 700;
     font-size: 20px;
+}
+
+.section-box-converted img {
+    width: 65px;
+}
+
+
+@media screen and (max-width: 930px) {
+
+    body {
+        height: auto;
+    }
+
+    .title {
+        flex-direction: column;
+    }
+
+    .title img {
+        width: 70px;
+    }
+
+    .title h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+    .content {
+        flex-direction: column;
+    }
+
+    main {
+        width: 90%;
+        margin: 70px auto;
+        padding: 20px;
+    }
+    
 }

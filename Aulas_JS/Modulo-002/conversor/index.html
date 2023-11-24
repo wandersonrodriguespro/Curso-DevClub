@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Conversor de Moeda</title>
 </head>
@@ -49,7 +51,7 @@
 
                 <label>
                     <b>Valor</b>
-                    <input name="input-currency" class="input-currency" placeholder="Digite um valor...">
+                    <input onkeypress="$(this).mask('###.000.000.000,00', {reverse: true});" name="input-currency" class="input-currency" placeholder="Digite um valor...">
                 </label>
             
                 <button class="convert-button">Converter</button>

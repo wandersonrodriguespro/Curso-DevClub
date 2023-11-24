@@ -51,10 +51,10 @@
 
                 <label>
                     <b>Valor</b>
-                    <input onkeypress="$(this).mask('###.000.000.000,00', {reverse: true});" name="input-currency" class="input-currency" placeholder="Digite um valor...">
+                    <input id="focus" onkeypress="$(this).mask('###.00', {reverse: true});" name="input-currency" class="input-currency" placeholder="Digite um valor...">
                 </label>
             
-                <button class="convert-button">Converter</button>
+                <button id="validation" class="convert-button">Converter</button>
             
             </section>
             
@@ -79,6 +79,28 @@
         </container>
 
     </main>
+
+    <div class="alert">
+        <p>Alerta!</p>
+        <p> mesma unidade selecionada</p>
+        <br>
+        <p>Ops! parece que você selecionou a mesma moeda para a conversão. certifique-se de escolher moedas distintas.</p>
+        <p class="closePopup" onclick= "closePopup()">X</p>
+    </div>
+
+    <div class="alert-select">
+        
+        <p>Não foi possível identificar uma das moedas a ser convertida, verifique e tente novamente</p>
+        <p class="closePopup" onclick= "closePopup()">X</p>
+    </div>
+
+    <div class="alert-input">
+        
+        <p>Não foi possível identificar o valor a ser convertido, verifique e tente novamente</p>
+        <p class="closePopup" onclick= "closePopup()">X</p>
+    </div>
+
+    <div class="mascara-alerta"></div>
     
 </body>
 <script src="js/scripts.js"></script>

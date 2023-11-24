@@ -5,9 +5,75 @@ const currencyValueToConvert = document.getElementById('to_convert')
 const currencyValueConverted = document.getElementById('result-convertes-value')
 const inputCurrencyPlaceholder = document.getElementsByName('input-currency')
 
-convertButton.addEventListener('click', convertValues)
+convertButton.addEventListener('click', validation)
 currencySelectFor.addEventListener('click', changeCurrencyin)
 currencySelectIn.addEventListener('click', changeCurrencyin)
+
+// ALERT 
+
+const mascAlerta = document.querySelector('.mascara-alerta')
+const alert = document.querySelector('.alert')
+const close = document.querySelector('.closePopup')
+const inputCurrency = document.querySelector('.input-currency');
+const alertSelect = document.querySelector('.alert-select')
+const alertInput = document.querySelector('.alert-input')
+inputCurrency.addEventListener('focus', repeatedValues);
+
+
+
+function repeatedValues() {
+    if (currencySelectIn.value === 'real' && currencySelectFor.value === 'to-real') {
+        mascAlerta.style.visibility = 'visible';
+        alert.style.display = 'flex';
+        currencySelectIn.addEventListener('change', repeatedValues);
+        currencySelectFor.addEventListener('change', repeatedValues);
+    }
+    if (currencySelectIn.value === 'dolar' && currencySelectFor.value === 'to-dolar') {
+        mascAlerta.style.visibility = 'visible';
+        alert.style.display = 'flex';
+        currencySelectIn.addEventListener('change', repeatedValues);
+        currencySelectFor.addEventListener('change', repeatedValues);
+    }
+    if (currencySelectIn.value === 'euro' && currencySelectFor.value === 'to-euro') {
+        mascAlerta.style.visibility = 'visible';
+        alert.style.display = 'flex';
+        currencySelectIn.addEventListener('change', repeatedValues);
+        currencySelectFor.addEventListener('change', repeatedValues);
+    }
+    if (currencySelectIn.value === 'libra' && currencySelectFor.value === 'to-libra') {
+        mascAlerta.style.visibility = 'visible';
+        alert.style.display = 'flex';
+        currencySelectIn.addEventListener('change', repeatedValues);
+        currencySelectFor.addEventListener('change', repeatedValues);
+    }
+    if (currencySelectIn.value === 'btc' && currencySelectFor.value === 'to-btc') {
+        mascAlerta.style.visibility = 'visible';
+        alert.style.display = 'flex';
+        currencySelectIn.addEventListener('change', repeatedValues);
+        currencySelectFor.addEventListener('change', repeatedValues);
+    }
+}
+
+function validation() {
+    
+
+    if (currencySelectIn.value == '' || currencySelectFor.value == ''){
+        
+        alertSelect.style.display = 'flex';
+        mascAlerta.style.visibility = 'visible';
+
+    }else if (inputCurrency.value == ''){
+
+        alertInput.style.display = 'flex';
+        mascAlerta.style.visibility = 'visible';
+        
+    }else{
+        convertValues()
+    }
+}
+
+
+// OPTION
 
 
 function changeCurrencyin() {
@@ -105,6 +171,7 @@ function convertValues() {
     const btcToDay = 183825
 
     const inputCurrencyValue = document.querySelector('.input-currency').value
+    
 
     
     //  CONVERSÃO DE REAL PARA ...
@@ -151,17 +218,6 @@ function convertValues() {
             minimumFractionDigits: 6
         }).format(resultRealToBtc)
     }
-    if (currencySelectIn.value == 'real' && currencySelectFor.value == 'to-real') {
-
-        let resultRealToReal = (realToDay / realToDay) * inputCurrencyValue
-
-        currencyValueConverted.innerHTML = new Intl.NumberFormat('pt-BR', {
-
-            style: 'currency',
-            currency: "BRL"
-        }).format(resultRealToReal)
-    }
-
 
     // CONVERSÃO DE DOLAR PARA ...
 
@@ -435,4 +491,18 @@ function convertValues() {
             minimumFractionDigits: 6
         }).format(inputCurrencyValue)
     }
+}
+
+
+mascAlerta.addEventListener('click', function () {
+    closePopup();
+});
+
+function closePopup() {
+
+    alert.style.display = 'none'
+    alertSelect.style.display = 'none'
+    alertInput.style.display = 'none'
+    mascAlerta.style.visibility = "hidden"
+
 }

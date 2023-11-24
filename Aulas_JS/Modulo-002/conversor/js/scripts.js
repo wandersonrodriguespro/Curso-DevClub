@@ -209,7 +209,7 @@ function convertValues() {
     }
     if (currencySelectIn.value == 'dolar' && currencySelectFor.value == 'to-real') {
 
-        const resultDolarToReal = (dolarToDay / realToDay) * inputCurrencyValue
+        let resultDolarToReal = (dolarToDay / realToDay) * inputCurrencyValue
 
         currencyValueConverted.innerHTML = new Intl.NumberFormat('pt-BR', {
 
@@ -222,11 +222,183 @@ function convertValues() {
     // CONVERSÃO DE EURO PARA ...
 
 
+    if (currencySelectIn.value == 'euro' && currencySelectFor.value == 'to-dolar' ) {
+
+        let resultEuroToDolar = (euroToDay / dolarToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('en-US', {
+
+            style: 'currency',
+            currency: 'USD'
+        }).format(resultEuroToDolar)
+    }
+    if (currencySelectIn.value == 'euro' && currencySelectFor.value == 'to-euro') {
+        
+        let resultEuroToEuro = (euroToDay / euroToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('de-DE', {
+
+            style: 'currency',
+            currency: 'EUR'
+        }).format(resultEuroToEuro)
+    }
+    if (currencySelectIn.value == 'euro' && currencySelectFor.value == 'to-libra') {
+        
+        let resultEuroToLibra = (euroToDay / libraToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('de-GB', {
+
+            style: 'currency',
+            currency: 'GBP'
+        }).format(resultEuroToLibra)
+    }
+    if (currencySelectIn.value == 'euro' && currencySelectFor.value == 'to-btc') {
+        
+        let resultEuroToBtc = (euroToDay / btcToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
+
+            style: 'currency',
+            currency: "BTC",
+            minimumFractionDigits: 6
+        }).format(resultEuroToBtc)
+    }
+    if (currencySelectIn.value == 'euro' && currencySelectFor.value == 'to-real') {
+        
+        let resultEuroTorReal = (euroToDay / realToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('pt-Br', {
+
+            style: 'currency',
+            currency: 'BRL'
+        }).format(resultEuroTorReal)
+    }
 
 
 
+
+    // CONVERSÃO DE LIBRA PARA ...
+
+
+
+
+    if (currencySelectIn.value == 'libra' && currencySelectFor.value == 'to-dolar') {
+
+        let resultLibraToDolar = (libraToDay / dolarToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('en-US', {
+
+            style: 'currency',
+            currency: 'USD'
+        }).format(resultLibraToDolar)
+    }
+    if (currencySelectIn.value == 'libra' && currencySelectFor.value == 'to-euro') {
+
+        let resultLibraToEuro = (libraToDay / dolarToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('de-DE', {
+
+            style: 'currency',
+            currency: 'EUR'
+        }).format(resultLibraToEuro)
+    }
+    if (currencySelectIn.value == 'libra' && currencySelectFor.value == 'to-libra') {
+
+        let resultLibraToLibra = (libraToDay / libraToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('de-GB', {
+
+            style: 'currency',
+            currency: 'GBP'
+        }).format(resultLibraToLibra)
+    }
+    if (currencySelectIn.value == 'libra' && currencySelectFor.value == 'to-btc') {
+
+        let resultLibraToBtc = (libraToDay / btcToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
+
+            style: 'currency',
+            currency: "BTC",
+            minimumFractionDigits: 6
+        }).format(resultLibraToBtc)
+    }
+    if (currencySelectIn.value == 'libra' && currencySelectFor.value == 'to-real') {
+
+        let resultLibraToReal = (libraToDay / realToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('pt-Br', {
+
+            style: 'currency',
+            currency: 'BRL'
+        }).format(resultLibraToReal)
+    }
+
+
+
+    // CONVERSÃO DE BTC PARA ...
+
+    
+    
+    if(currencySelectIn.value == 'btc' && currencySelectFor.value == 'to-dolar') {
+
+        let resultBtcToDolar = (btcToDay / dolarToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('en-US', {
+
+            style: 'currency',
+            currency: 'USD'
+        }).format(resultBtcToDolar)
+    }
+    if(currencySelectIn.value == 'btc' && currencySelectFor.value == 'to-euro') {
+
+        let resultBtcToEuro = (btcToDay / euroToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('de-DE', {
+
+            style: 'currency',
+            currency: 'EUR'
+        }).format(resultBtcToEuro)
+    }
+    if(currencySelectIn.value == 'btc' && currencySelectFor.value == 'to-libra') {
+
+        let resultBtcToLibra = (btcToDay / libraToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('de-GB', {
+
+            style: 'currency',
+            currency: 'GBP'
+        }).format(resultBtcToLibra)
+    }
+    if(currencySelectIn.value == 'btc' && currencySelectFor.value == 'to-btc') {
+
+        let resultBtcToBtc = (btcToDay / btcToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
+
+            style: 'currency',
+            currency: "BTC",
+            minimumFractionDigits: 6
+        }).format(resultBtcToBtc)
+    }
+    if(currencySelectIn.value == 'btc' && currencySelectFor.value == 'to-real') {
+
+        let resultBtcToReal = (btcToDay / realToDay) * inputCurrencyValue
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat ('pt-Br', {
+
+            style: 'currency',
+            currency: 'BRL'
+        }).format(resultBtcToReal)
+    }
+
+
+    
+    
     // VALUE TO CONVERT
 
+    
+    
     if (currencySelectIn.value == 'real') {
 
         currencyValueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', {

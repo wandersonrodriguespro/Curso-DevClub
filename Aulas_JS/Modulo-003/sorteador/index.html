@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sorteador</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <img src="img/sort_1.png" alt="imagem de um dado com a escriato do nome deve sorteio">
+    
+    <div class="result">
+    <h2>Resultado</h2>
+    <p id="result">-----</p>
+    </div>
+
+    <h3>Sortear um Número</h3>
+
+    <div class="inputNumeros">
+        <input name="numMin" type="number" placeholder="entre" class="input_min">
+        <input name="numMax" type="number" placeholder="e" class="input_max">
+    </div>
+
+    <button id="btnSortear">Sortear</button>
+    <button id="btnReset">Reset</button>
+
+    
+    <div class="bg-alert">
+        <div class="msg-alert">
+            <h2>Alerta!!</h2>
+            <p>
+            Não identificamos um dos campos a ser sorteado
+            <br>
+            Verifique e tente novamente
+            </p>
+            <p class="close">X</p>
+        
+        </div>
+    </div>
+    
+    
+    <div class="validation-at-start">
+        <div class="msg-alert">
+            <h2>Alerta!!</h2>
+            <p>
+            Número Inicial Maior Que Número Final
+            <br>
+            Verifique e tente novamente
+            </p>
+            <p class="close">X</p>
+        
+        </div>
+    </div>
+    
+</body>
+
+<script src="js/scripts.js"></script>
+</html>

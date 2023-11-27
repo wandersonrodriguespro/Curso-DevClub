@@ -58,7 +58,6 @@ h2 {
 }
 
 img {
-    /* margin: 50px 3% 0; */
     max-width: 400px;
 }
 
@@ -135,7 +134,7 @@ button:active {
 
 .bg-alert, .validation-at-start {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     background-color: #000000ad;
     backdrop-filter: blur(9px);
@@ -175,5 +174,43 @@ button:active {
     right: 5px;
     padding: 20px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+
+    body {
+        padding: 70px 0;
+    }
+   
+    img {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        width: 60%;
+    }
+    #result {
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
+    }
+    .bg-alert {
+        height: 100vh;
+        width: auto;
+        background-color: #00000000;
+        backdrop-filter: blur(0);
+    }
+
+    .validation-at-start{
+        background-color: #00000000;
+    }
+    .msg-alert {
+        width: 90%;
+        background-color: rgb(223, 19, 19);
+        padding: 10px;
+    }
 }
 

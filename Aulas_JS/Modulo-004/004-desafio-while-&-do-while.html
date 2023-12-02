@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio while & do while</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Digite o nome do contato">
+    <br>
+    <br>
+    <button onclick="search()">Procurar contato</button>
+    <p></p>
+
+</body>
+
+<script>
+
+    let p = document.querySelector('p')
+    let input = document.querySelector('input')
+
+
+    const contacts = [
+        { name: 'Rodolfo', number: '(19) 94343-3434' },
+        { name: 'Wanderson', number: '(11) 94343-3434' },
+        { name: 'Juliana', number: '(12) 94343-3434' },
+        { name: 'Lucas', number: '(13) 94343-3434' },
+        { name: 'Davi', number: '(15) 94343-3434' },
+        { name: 'Gabriel', number: '(17) 94343-3434' },
+        { name: 'Geovana', number: '(16) 94343-3434' },
+    ]
+
+
+    input.addEventListener('keypress', function (event) {
+        if (event.key == 'Enter') {
+            search()
+        }
+    })
+
+    function search() {
+
+        let i = 0
+
+        do {
+            
+            if (input.value.toLowerCase() == contacts[i].name.toLowerCase()) {
+                p.innerHTML = `
+                <b>Contato Encontrado...</b><br>
+                <b>Nome: </b> ${contacts[i].name}<br>
+                <b>Telefone: </b> ${contacts[i].number}
+                `
+                break
+            } else {
+                p.innerHTML = 'Contato não encontrado'
+            }
+            
+            i++
+        } while (i < contacts.length);
+    }
+    
+    // while (i < contacts.length) {
+
+    //     if (input.value.toLowerCase() == contacts[i].name.toLowerCase()) {
+    //         p.innerHTML = `
+    //             <b>Contato Encontrado..</b><br>
+    //             <b>Nome: </b> ${contacts[i].name}<br>
+    //             <b>Telefone: </b> ${contacts[i].number}
+    //             `
+    //         break
+    //     } else {
+    //         p.innerHTML = 'Contato não encontrado'
+    //     }
+
+    //     i++
+
+    // }
+    
+</script>
+
+</html>

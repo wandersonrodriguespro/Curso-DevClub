@@ -1,0 +1,229 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body {
+    background: url(https://source.unsplash.com/1600x900/?landscape);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+
+.container {
+    width: 80%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 23px -4px #00000070;
+}
+
+h1{
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+.points-players {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.player01 {
+    color: rgb(77, 128, 216);
+}
+
+.player02{
+    color: #E0470F;
+}
+
+.point-play1, .point-play2 {
+    border-radius: 7px;
+    font-size: 35px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+section.players {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px;
+    text-align: center;
+}
+
+
+
+.container-player1, .container-player2 {
+    width: 45%;
+    min-height: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container-player1 {
+    border: 1px solid rgb(77, 128, 216);
+}
+.container-player2 {
+    border: 1px solid #E0470F;
+}
+
+.btn-jogador {
+    margin: 15px 0 ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;   
+}
+
+button {
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+
+}
+.players button:hover {
+    transform: scale(1.2);
+}
+
+.p1rock, .p2rock {
+    background-color: #a200ff;
+}
+.p1paper, .p2paper{
+    background-color: #9ee01a;
+}
+.p1scissor, .p2scissor {
+    background-color: #7dbeed;
+}
+
+.result {
+    height: 40px;
+    width: 300px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 25px 0;
+}
+
+.action button, .limpar-novamente {
+    font-size: 18px;
+    width: 200px;
+    letter-spacing: 1.2px;
+}
+
+.limpar-novamente {
+    margin-top: 25px;
+    width: 250px;
+    height: 45px;
+    background-color: #BE4CFF;
+    color: #ffffff;
+}
+
+.action button:nth-of-type(1) {
+    background-color: #2aab10;
+    color: #ffffff;
+}
+
+.action button:nth-of-type(2) {
+    background-color: #3e82b3;
+    color: #ffffff;
+}
+
+/* .opacity {
+    opacity: 0.2;
+} */
+
+@media screen and (max-width: 1150px) {
+    .container {
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+}
+
+@media screen and (max-width: 945px) {
+    .btn-jogador button {
+        font-size: 35px;   
+   }
+
+}
+
+@media screen and (max-width: 800px) {
+    .container-player1, .container-player2 {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+
+    body{
+        padding: 55px 25px;
+    }
+    
+    .container-player1, .container-player2 {
+        width: 100%;
+        margin: 0;
+    }
+
+    
+
+    .container {
+        width: 100%;
+        background-color: #ffffff;
+    }
+    .result {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .btn-jogador button {
+        font-size: 25px;   
+   }
+}

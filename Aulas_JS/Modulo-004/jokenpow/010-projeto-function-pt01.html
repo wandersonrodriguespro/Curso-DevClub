@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JokemPô</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JokemPô</h1>
+        
+        <div class="points-players">
+            <div class="player01">
+                <p>Player 01:<p>
+                <p class="point-play1">0</p>
+            </div>
+            <div class="player02">
+                <p>Player 02:<p>
+                <p class="point-play2">0</p>
+            </div>
+        </div>
+        
+        <section class="players">
+            <div class="container-player1">
+                <p>Escolha Player 01</p>
+                <div class="btn-jogador" id="btn-jogador1">
+                    <button class="p1rock" id="p1rock" onclick="opPlayer01('rock')">&#x1F44A;</button>
+                    <button class="p1paper" id="p1paper" onclick="opPlayer01('paper')">&#x1f590;</button>
+                    <button class="p1scissor" id="p1scissor" onclick="opPlayer01('scissor')">&#x270c;</button>
+                </div>
+            </div>
+            <div class="container-player2">
+                <p>Escolha Player 02</p>
+                <div class="btn-jogador" id="btn-jogador2">
+                    <button class="p2rock" id="p2rock" onclick="opPlayer02('rock')">&#x1F44A;</button>
+                    <button class="p2paper" id="p2paper" onclick="opPlayer02('paper')">&#x1f590;</button>
+                    <button class="p2scissor" id="p2scissor" onclick="opPlayer02('scissor')">&#x270c;</button>
+                </div>
+            </div>
+        </section>
+
+        <p class="result">Aguardando Início!</p>
+
+        <button class="limpar-novamente">Escolher Novamente</button>
+        
+
+        <div class="action">
+            <button id="jogar" onclick="jogar()">Jogar</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

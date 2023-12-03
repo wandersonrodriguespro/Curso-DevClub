@@ -34,6 +34,7 @@ h1{
     font-size: 40px;
     letter-spacing: 1px;
     margin: 15px 0;
+    color: #BE4CFF;
 }
 
 .points-players {
@@ -183,32 +184,38 @@ button:hover {
 .action {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 15px;
     width: 100%;
     padding: 25px 0;
+    max-width: 500px;
 }
 
-.action button, .limpar-novamente {
+.action button{
     font-size: 18px;
     width: 200px;
+    height: 45px;
     letter-spacing: 1.2px;
 }
 
 .limpar-novamente {
-    margin-top: 25px;
-    width: 250px;
+    width: 100%;
+    /* margin-top: 25px; */
+    /* width: 250px; */
     height: 45px;
     background-color: #BE4CFF;
     color: #ffffff;
 }
 
-.action button:nth-of-type(1) {
+.action #jogar {
+    width: 100%;
+    height: 45px;
     background-color: #2aab10;
     color: #ffffff;
 }
 
-.action button:nth-of-type(2) {
+.action #reset {
     background-color: #3e82b3;
     color: #ffffff;
 }
@@ -278,6 +285,15 @@ button:hover {
     }
 }
 
+@media screen and (max-width: 500px) {
+    button.limpar-novamente {
+        width: 100%;
+    }
+    button#reset {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .btn-jogador {
         gap: 10px;
@@ -316,6 +332,7 @@ button:hover {
     
     button#jogar {
         width: 100%;
+        padding: 0;
     }
     .container-player1 p {
         padding: 10px;

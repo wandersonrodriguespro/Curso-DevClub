@@ -181,6 +181,7 @@ button:hover {
     justify-content: center;
 }
 
+
 .action {
     display: flex;
     align-items: center;
@@ -248,6 +249,9 @@ button:hover {
     .btn-jogador button {
         font-size: 40px;
     }
+    .btn-result {
+        font-size: 50px;
+    }
 
 }
 
@@ -314,8 +318,10 @@ button:hover {
     
     .btn-jogador button {
         font-size: 41px;
-
    }
+   .btn-result {
+    font-size: 50px;
+}
    .limpar-novamente{
     width: 100%;
    }
@@ -371,11 +377,17 @@ button:hover {
     .btn-jogador button {
         font-size: 35px;
     }
+    .btn-result {
+        font-size: 50px;
+    }
     
 }
 
 @media screen and (max-width: 325px) {
     .btn-jogador button {
         font-size: 42px;
+    }
+    .btn-result {
+        font-size: 50px;
     }
 }

@@ -81,7 +81,7 @@ section.players {
 
 .container-player1, .container-player2, .container-resultado {
     width: 45%;
-    min-height: 220px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;

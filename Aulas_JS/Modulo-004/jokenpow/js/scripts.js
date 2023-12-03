@@ -18,7 +18,74 @@ const load = document.querySelector('.load')
 const result = document.querySelector('.result')
 const reset = document.getElementById('reset')
 
+const choicesFrases = [ 
+    'Eu até queria ser mais rápido mas o bicicleta quebrou',
+    'Uma xicara de café cairia tão bem agora 🤗',
+    'Pode puxar o banquinho, acho que vai demorar',
+    'mais rápido que uma tartaruga com cafeína.',
+    'Aguarde, estamos dando um trato nos bits bagunçados.',
+    'mais rápido que o flash na maratona.',
+    'Aguardando como quem espera café na segunda-feira.',
+    'Aguarde... Não é mágica, é tecnologia!',
+    'Espera aí, estamos aquecendo os bits',
+    'Aguarde, estamos treinando hamsters para rodar mais rápido.',
+    'Carregando alegria e alguns bits perdidos pelo caminho.',
+    'Aguarde... porque até a tecnologia precisa de um café.',
+    'Aguarde... vou ali pegar um café.',
+    'Estamos convencendo os bits a correrem mais rápido.',
+    'Mais lento que um caracol com peso na consciência.',
+    'Mais eficiente que a desculpa do meu despertador.',
+    'Aguardando como quem espera a senha do Wi-Fi na casa do amigo.',
+    'Tão rápido quanto um raio, mas com menos trovões.',
+    'Espera aí, estamos contando piadas para animar os servidores.',
+    'Aguarde, estamos ajustando o cronômetro do tempo.',
+    'Carregando sorrisos e um pouco de chocolate, só para garantir.',
+    'Aguardando como quem espera o ketchup descer na garrafa.',
+    'Aguarde, estamos afinando as cordas do ukulele do servidor.',
+    'Aguarde, estamos contando piadas internas que só o servidor entende.',
+    'Carregando tão rápido quanto um raio, mas sem o trovão para não assustar.',
+    'Aguarde como uma tartaruga com pressa.',
+    'Carregando alegria e um sorriso no pacote.',
+    'Mais ágil que um pinguim no gelo.',
+    'Aguardando como quem espera a chuva no verão.',
+    'Carregando otimismo em doses concentradas.',
+    'Aguarde, estamos ajustando os ponteiros do riso.',
+    'Aguarde como quem espera o bolo no forno.',
+    'Aguarde ou conte até 100, se preferir.',
+    'Aguarde estamos desenrolando o tapete vermelho digital.',
+    'Aguarde um momento ou faça uma dança rápida enquanto espera',
+    'Aguarde mais rápido que a água fervendo para o café.',
+    'Aguarde com calma... vou ser mais rápido que uma formiga no piquenique.',
+    'Aguarde como quem espera o elevador chegar no último andar.',
+    'Mais rápido que uma soneca de gato.',
+    'Aguarde ou faça uma careta engraçada enquanto espera.',
+    'Estamos ajustando os ponteiros do relógio cibernético.',
+    'Mais rápido que uma ideia brilhante.',
+    'Estamos contando piadas internas para animar o processo.',
+    'Mais rápido que um abraço de urso.',
+    'Mais rápido que um pensamento positivo.',
+    'Aguarde um pouco ou conte até três suspiros profundos.',
+    'Mais rápido que a espera pelo fim de semana.',
+    'Estamos penteando os bits para um visual mais elegante.',
+    'Aguarde estamos dando uma aula de ioga aos bytes.',
+    'Aguarde ou faça um breve alongamento.',
+    'Aguarde... estamos dando um polimento nos pixels.',
+    'Aguarde ou aproveite para fazer uma poesia rápida.',
+    'Aguarde como quem espera a sobremesa depois do jantar.',
+    'Mais rápido que um caracol após a chuva.',
+    'Aguarde... estamos soltando balões virtuais para animar.',
+    'Aguarde ou cante uma música curta enquanto espera.',
+    'Aguarde um pouco mais... ou faça uma careta para o tédio.',
+    'Aguarde... estamos contando estrelas cadentes para sorte extra.',
+]
 
+
+const getRandomFrase = () => {
+    const randomIndex = Math.floor(Math.random() * choicesFrases.length);
+    return choicesFrases[randomIndex];
+}
+
+// const fraseEscolhida = getRandomFrase();
 
 
 
@@ -42,23 +109,21 @@ const verificarJogadores = () => {
         container2.style.display = 'flex'
         result.innerHTML = ('Aguardando Player 2')
         result.style.border = '1px solid'
+        
 
-    }// else if (!opcaoPlayer01 && opcaoPlayer02) {
-
-    //     result.innerHTML = ('Aguardando Player 1')
-    //     result.style.border = '1px solid'
-
-    // } 
-    else if (opcaoPlayer01 && opcaoPlayer02) {
+    }else if (opcaoPlayer01 && opcaoPlayer02) {
         container2.style.display = 'none'
         containerResultado.style.display = 'flex'
+        
 
         result.innerHTML = ('Aguardando ...')
         result.style.border = '1px solid'
+        vsResult.innerHTML = getRandomFrase()
 
-        setInterval(jogar, 3000)
+        
         
     }
+    setTimeout(jogar, 5000)
 }
 
 
@@ -76,8 +141,8 @@ const jogar = () => {
         load.style.display = 'none'
             
         destacar()
-        // opcaoPlayer01 = null
-        // opcaoPlayer02 = null
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
 
     } else if (
@@ -96,8 +161,8 @@ const jogar = () => {
         load.style.display = 'none'
 
         destacar()
-        // opcaoPlayer01 = null
-        // opcaoPlayer02 = null
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
     } else if (
         opcaoPlayer01 == 'rock' && opcaoPlayer02 == 'paper' ||
         opcaoPlayer01 == 'paper' && opcaoPlayer02 == 'scissor' ||
@@ -114,17 +179,11 @@ const jogar = () => {
         load.style.display = 'none'
 
         destacar()
-        // opcaoPlayer01 = null
-        // opcaoPlayer02 = null
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
     }
 
 }
-// const p1Rock = document.querySelector('.p1rock')
-// const p1Paper = document.querySelector('.p1paper')
-// const p1Scissor = document.querySelector('.p1scissor')
-// const p2Rock = document.querySelector('.p2rock')
-// const p2Paper = document.querySelector('.p2paper')
-// const p2Scissor = document.querySelector('.p2scissor')
 
 
 const p1RockResult = document.querySelector('.p1rock-result')
@@ -216,8 +275,8 @@ reset.addEventListener('click', () => {
     vsResult.innerHTML = 'Clique em Ver Resultado'
     load.style.display = 'flex'
 
-    opcaoPlayer01 = null
-    opcaoPlayer02 = null
+    opcaoPlayer01 = ''
+    opcaoPlayer02 = ''
     resultPlay01 = 0
     resultPlay02 = 0
 
@@ -229,20 +288,6 @@ reset.addEventListener('click', () => {
     result.style.color = '#000000'
     result.style.border = '1px solid'
     result.innerHTML = 'Aguardando...'
-
-    // p1Rock.style.opacity = '1'
-    // p1Paper.style.opacity = '1'
-    // p1Scissor.style.opacity = '1'
-    // p1Rock.style.transform = 'scale(1)'
-    // p1Paper.style.transform = 'scale(1)'
-    // p1Scissor.style.transform = 'scale(1)'
-
-    // p2Rock.style.opacity = '1'
-    // p2Paper.style.opacity = '1'
-    // p2Scissor.style.opacity = '1'
-    // p2Rock.style.transform = 'scale(1)'
-    // p2Paper.style.transform = 'scale(1)'
-    // p2Scissor.style.transform = 'scale(1)'
 
     resetDisplay()
 
@@ -263,27 +308,14 @@ const limparDestaque = document.querySelector('.limpar-novamente')
 limparDestaque.addEventListener('click', () => {
     containerResultado.style.display = 'none'
     container1.style.display = 'flex'
-    opcaoPlayer01 = ""
-    opcaoPlayer02 = ""
+    opcaoPlayer01 = null
+    opcaoPlayer02 = null
     result.innerHTML = 'Aguardando...'
     result.style.backgroundColor = '#ffffff'
     result.style.color = '#000000'
     result.style.border = '1px solid'
     vsResult.innerHTML = 'Clique em Ver Resultado'
     load.style.display = 'flex'
-    // p1Rock.style.opacity = '1'
-    // p1Paper.style.opacity = '1'
-    // p1Scissor.style.opacity = '1'
-    // p1Rock.style.transform = 'scale(1)'
-    // p1Paper.style.transform = 'scale(1)'
-    // p1Scissor.style.transform = 'scale(1)'
-
-    // p2Rock.style.opacity = '1'
-    // p2Paper.style.opacity = '1'
-    // p2Scissor.style.opacity = '1'
-    // p2Rock.style.transform = 'scale(1)'
-    // p2Paper.style.transform = 'scale(1)'
-    // p2Scissor.style.transform = 'scale(1)'
     resetDisplay()
 
 })

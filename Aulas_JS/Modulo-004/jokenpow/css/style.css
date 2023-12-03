@@ -268,7 +268,7 @@ button:hover {
     }
     .point-play1, .point-play2 {
         padding: 0;
-        font-size: 30pxpx;
+        font-size: 30px;
     }
 
     .container {
@@ -293,7 +293,7 @@ button:hover {
    }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 352px) {
     p.result {
         padding: 10px 0;
     }
@@ -302,6 +302,7 @@ button:hover {
     }
     .container-player1 p {
         font-size: 14px;
+        width: 100%;
     }
     
     button#jogar {
@@ -312,6 +313,13 @@ button:hover {
     }
     section.players {
         margin: 15px;
+    }
+    .point-play1, .point-play2 {
+        font-size: 20px;
+    }
+    .limpar-novamente {
+        margin-top: 15px;
+        padding: 0;
     }
     
 }

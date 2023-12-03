@@ -274,7 +274,7 @@ button:hover {
 @media screen and (max-width: 570px) {
 
     body{
-        padding: 55px 25px;
+        padding: 25px;
     }
     
     .container-player1, .container-player2, .container-resultado {

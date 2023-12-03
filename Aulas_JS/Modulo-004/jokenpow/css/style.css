@@ -293,7 +293,7 @@ button:hover {
    }
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 350px) {
     p.result {
         padding: 10px 0;
     }
@@ -306,6 +306,12 @@ button:hover {
     
     button#jogar {
         width: 100%;
+    }
+    .container-player1 p {
+        padding: 10px;
+    }
+    section.players {
+        margin: 15px;
     }
     
 }

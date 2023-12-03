@@ -209,6 +209,15 @@ button:hover {
     .container-player1, .container-player2 {
         width: 100%;
         margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    section.players{
+        margin: 15px 0 30px;
+    }
+    .point-play1, .point-play2 {
+        padding: 0;
+        font-size: 30pxpx;
     }
 
     
@@ -216,6 +225,7 @@ button:hover {
     .container {
         width: 100%;
         background-color: #ffffff;
+        padding: 15px;
     }
     .result {
         width: 100%;
@@ -225,5 +235,8 @@ button:hover {
 @media screen and (max-width: 420px) {
     .btn-jogador button {
         font-size: 25px;   
+   }
+   .limpar-novamente{
+    width: 100%;
    }
 }

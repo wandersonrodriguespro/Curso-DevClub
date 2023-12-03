@@ -56,7 +56,7 @@ const verificarJogadores = () => {
         result.innerHTML = ('Aguardando ...')
         result.style.border = '1px solid'
 
-        setInterval(jogar, 2000)
+        setInterval(jogar, 3000)
         
     }
 }

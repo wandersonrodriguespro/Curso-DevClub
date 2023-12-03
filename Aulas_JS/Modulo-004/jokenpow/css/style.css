@@ -314,6 +314,7 @@ button:hover {
    }
    .container-player1 p {
     width: 100%;
+    padding: 10px;
    }
 
 }
@@ -328,14 +329,12 @@ button:hover {
     .container-player1 p {
         font-size: 14px;
         width: 100%;
+        padding: 10px;
     }
     
     button#jogar {
         width: 100%;
         padding: 0;
-    }
-    .container-player1 p {
-        padding: 10px;
     }
     section.players {
         margin: 15px;

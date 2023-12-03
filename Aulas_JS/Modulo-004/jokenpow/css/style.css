@@ -242,12 +242,27 @@ button:hover {
     .result {
         width: 80%;
     }
+    .btn-jogador {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+    .btn-jogador button {
+        font-size: 40px;
+    }
 
 }
 
 @media screen and (max-width: 800px) {
     .container-player1, .container-player2, .container-resultado {
         width: 90%;
+    }
+    .btn-jogador {
+        width: 100%;
+    }
+
+    .btn-jogador button {
+        font-size: 53px;
     }
 
     
@@ -300,7 +315,7 @@ button:hover {
     }
     
     .btn-jogador button {
-        font-size: 35px;
+        font-size: 41px;
 
    }
    .limpar-novamente{
@@ -346,5 +361,14 @@ button:hover {
         margin-top: 15px;
         padding: 0;
     }
+    .btn-jogador button {
+        font-size: 35px;
+    }
     
+}
+
+@media screen and (max-width: 325px) {
+    .btn-jogador button {
+        font-size: 42px;
+    }
 }

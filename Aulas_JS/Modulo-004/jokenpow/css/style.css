@@ -279,8 +279,13 @@ button:hover {
 }
 
 @media screen and (max-width: 420px) {
+    .btn-jogador {
+        gap: 10px;
+    }
+    
     .btn-jogador button {
-        font-size: 25px;   
+        font-size: 35px;
+
    }
    .limpar-novamente{
     width: 100%;
@@ -291,6 +296,10 @@ button:hover {
    .action button {
     width: 100%;
    }
+   .container-player1 p {
+    width: 100%;
+   }
+
 }
 
 @media screen and (max-width: 352px) {

@@ -331,6 +331,10 @@ button:hover {
     width: 100%;
     padding: 10px;
    }
+   .container-player2 p{
+    width: 100%;
+    padding: 10px;
+   }
 
 }
 
@@ -342,6 +346,11 @@ button:hover {
         font-size: 20px;
     }
     .container-player1 p {
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+    }
+    .container-player2 p {
         font-size: 14px;
         width: 100%;
         padding: 10px;

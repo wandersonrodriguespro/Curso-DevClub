@@ -55,6 +55,9 @@ const verificarJogadores = () => {
 
         result.innerHTML = ('Aguardando ...')
         result.style.border = '1px solid'
+
+        setInterval(jogar, 2000)
+        
     }
 }
 
@@ -71,7 +74,7 @@ const jogar = () => {
 
         vsResult.innerHTML = 'X'
         load.style.display = 'none'
-
+            
         destacar()
         // opcaoPlayer01 = null
         // opcaoPlayer02 = null
@@ -139,50 +142,68 @@ function destacar() {
 
         p1RockResult.style.display = 'flex'
         p2RockResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
 
     } else if (opcaoPlayer01 == 'paper' && opcaoPlayer02 == 'paper') {
         p1PaperResult.style.display = 'flex'
         p2PaperResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
 
     } else if (opcaoPlayer01 == 'scissor' && opcaoPlayer02 == 'scissor') {
         
         p1ScissorResult.style.display = 'flex'
         p2ScissorResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
 
     } else if (opcaoPlayer01 == 'rock' && opcaoPlayer02 == 'scissor') {
 
         p1RockResult.style.display = 'flex'
         p2ScissorResult.style.display  = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
 
     } else if (opcaoPlayer01 == 'rock' && opcaoPlayer02 == 'paper') {
         
         p1RockResult.style.display = 'flex'
         p2PaperResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
 
     } else if (opcaoPlayer01 == 'paper' && opcaoPlayer02 == 'rock') {
         
         p2RockResult.style.display = 'flex'
         p1PaperResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
     } else if (opcaoPlayer01 == 'paper' && opcaoPlayer02 == 'scissor') {
 
         p1PaperResult.style.display = 'flex'
         p2ScissorResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
     } else if (opcaoPlayer01 == 'scissor' && opcaoPlayer02 == 'rock') {
 
         p1ScissorResult.style.display = 'flex'
         p2RockResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
     } else if (opcaoPlayer01 == 'scissor' && opcaoPlayer02 == 'paper') {
 
         p1ScissorResult.style.display = 'flex'
         p2PaperResult.style.display = 'flex'
+        opcaoPlayer01 = null
+        opcaoPlayer02 = null
 
     }
 }

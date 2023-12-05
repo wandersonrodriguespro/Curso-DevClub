@@ -13,4 +13,11 @@ const companies = [
 ]
 
 
-const companies
+const companiesValue = companies.map ((valueAtual, index, array) => {
+    const atualizarValue = valueAtual.MarketValue * 0.10 + valueAtual.MarketValue
+
+    return(atualizarValue)
+})
+
+
+console.log(companiesValue)

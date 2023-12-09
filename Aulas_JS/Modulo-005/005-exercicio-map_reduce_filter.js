@@ -13,11 +13,42 @@ const companies = [
 ]
 
 
-const companiesValue = companies.map ((valueAtual, index, array) => {
-    const atualizarValue = valueAtual.MarketValue * 0.10 + valueAtual.MarketValue
+// const addValue = company => {
+//     company.MarketValue = company.MarketValue * 0.10 + company.MarketValue
+//     return (company)
+// }
+// const filterCompany = company => company.foundedOn < 1990
+// const CalcValue = (acc, company) => acc + company.MarketValue
 
-    return(atualizarValue)
-})
+// const companiesValue = companies
+//     .map(addValue)
+//     .filter(filterCompany)
+//     .reduce(CalcValue, 0)
 
 
-console.log(companiesValue)
+// console.log(companiesValue)
+
+
+
+// Subtrair 10% de valor de mercado a todas as companhias -> MAP
+// Filtrar somente companhias fundadas abaixo de 1980 -> FILTER
+// Somar o valor de mercado das restantes -> REDUCE
+
+
+
+const subValue = companySub => {
+    companySub.MarketValue = companySub.MarketValue - (companySub.MarketValue * 0.10)
+
+    return companySub
+}
+
+const filterCompanySub = companyOld => companyOld.foundedOn < 1980
+const sumCompanySub = (acc , company) => acc + company.MarketValue
+
+
+const companyMarketValueSub = companies
+.map(subValue)
+.filter(filterCompanySub)
+.reduce(sumCompanySub, 0)
+
+console.log(companyMarketValueSub);

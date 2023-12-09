@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 95px;
+}
+
+nav button {
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 16px;
+    letter-spacing: 1px;
+    background-color: #79cb15;
+    color: #000;
+}
+
+nav button:hover {
+    opacity: .9;
+    transform: scale(1.1);
+}
+nav button:active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 40px;
+    justify-content: center;
+    margin: 50px 0;
+}
+li {
+    border: 2px solid #8133ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px -1px #fff;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+p {
+    margin: 0 20px;
+    color: #fff;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #79cb15;
+}
+

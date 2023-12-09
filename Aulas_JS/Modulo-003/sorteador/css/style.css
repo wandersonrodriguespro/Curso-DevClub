@@ -96,7 +96,8 @@ input {
     backdrop-filter: blur(8px);
     /* opacity: .7; */
 }
-input::placeholder{
+
+input::placeholder {
     color: #ffffff;
     /* opacity: 1; */
 }
@@ -119,7 +120,7 @@ button {
     cursor: pointer;
 }
 
-button:nth-last-of-type(1){
+button:nth-last-of-type(1) {
     margin-top: 15px;
 }
 
@@ -132,7 +133,8 @@ button:active {
 }
 
 
-.bg-alert, .validation-at-start {
+.bg-alert,
+.validation-at-start {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -158,7 +160,7 @@ button:active {
     backdrop-filter: blur(12px);
 }
 
-.msg-alert h2{
+.msg-alert h2 {
     color: yellow;
 }
 
@@ -181,7 +183,7 @@ button:active {
     body {
         padding: 70px 0;
     }
-   
+
     img {
         width: 90%;
         padding: 20px;
@@ -190,6 +192,7 @@ button:active {
     button {
         width: 60%;
     }
+
     #result {
         width: 100%;
     }
@@ -197,6 +200,7 @@ button:active {
     input {
         width: 90%;
     }
+
     .bg-alert {
         height: 100vh;
         width: auto;
@@ -204,13 +208,13 @@ button:active {
         backdrop-filter: blur(0);
     }
 
-    .validation-at-start{
+    .validation-at-start {
         background-color: #00000000;
     }
+
     .msg-alert {
         width: 90%;
         background-color: rgb(223, 19, 19);
         padding: 10px;
     }
 }
-

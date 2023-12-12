@@ -20,12 +20,14 @@ header {
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
+    margin: auto;
 }
 
 header nav {
     display: flex;
     gap: 40px;
     align-items: center;
+    max-width: 1480px;
 }
 
 .nav-link {
@@ -66,7 +68,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 105px;
+    margin: 105px auto 0;
+    max-width: 1480px;
 }
 
 .container-left {

@@ -163,12 +163,16 @@ function changeCurrencyin() {
 // CONVERT VALUES
 
 
-function convertValues() {
+const convertValues = async () => {
+    const data = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL').then(response => response.json())
+
+
     const realToDay = 1
-    const dolarToDay = 4.90
-    const euroToDay = 5.35
-    const libraToDay = 6.15
-    const btcToDay = 183825
+    const dolarToDay = data.USDBRL.high
+    const euroToDay = data.EURBRL.high
+    const libraToDay = data.GBPBRL.high
+    const btcToDay = data.BTCBRL.high
+
 
     const inputCurrencyValue = document.querySelector('.input-currency').value
     

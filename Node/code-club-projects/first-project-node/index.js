@@ -14,16 +14,17 @@
  * 
 **/
 
-const express = require('express')
-const uuid = require('uuid')
+const express = require('express');
+const uuid = require('uuid');
 
-const port = 3000
-const app = express()
-app.use(express.json())
+const port = 3001;
+const app = express();
+app.use(express.json());
+app.use (cors())
 
 const users = []
 
-const  checkUserId = (request, response, next) => {
+const checkUserId = (request, response, next) => {
     const { id } = request.params
     const index = users.findIndex(user => user.id === id)
 
@@ -43,12 +44,22 @@ app.get('/users', (request, response) => {
 
 
 app.post('/users', (request, response) => {
-    const { name, age } = request.body
-    const user = { id: uuid.v4(), name, age }
 
-    users.push(user)
+    try {
+        const { name, age } = request.body
 
-    return response.status(201).json(user)
+        if (age < 18) throw new Error('Only allow users overs over 18 years old')
+
+        const user = { id: uuid.v4(), name, age }
+
+        users.push(user)
+
+        return response.status(201).json(user)
+    } catch (err) {
+        return response.status(500).json({ error: err.message })
+    } finally {
+        console.log('terminou de adicionar')
+    } // FInally é opcional
 })
 
 

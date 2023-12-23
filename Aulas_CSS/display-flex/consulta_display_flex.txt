@@ -1,0 +1,8 @@
+origamid        => https://origamid.com/projetos/flexbox-guia-completo/ => site para consulta para display flex
+
+flex-basis      => Delimita o tamanho dos itens "base"
+flex-grow       => Capacidade do item de crescer no espaço vago "ocupar esse espaço" => flex-grow: 1;
+flex-shrink     => Capacidade de encolha do item "quanto ele vai encolher no espaço" = flex-shrink: 1;
+flex            => Atalho para usar o flex-basis, flex-grow, flex-shrink nesta mesma ordem => flex: 200px 1 1;
+order           => Usado para inverter a ordem dos itens => order: 1;
+align-self      => parecido com aling-itens, só que é atribuido para um item unico, "muda o aling-item somente do item que foi adicionado" => align-slef: flex-end;

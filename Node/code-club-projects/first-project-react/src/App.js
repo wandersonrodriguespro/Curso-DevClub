@@ -24,20 +24,18 @@ const App = () => {
 
   async function addNewUser () {
 
-    const data = await axios.post("http://localhost:3001/users", {
-      name: inputName.current.value,
-      age: inputAge.current.value
-    })
+    // const { data: newUser } = await axios.post("http://localhost:3001/users", {
+    //   name: inputName.current.value,
+    //   age: inputAge.current.value
+    // })
 
-    console.log(data);
+    // console.log(newUser);
 
-    // setUsers([
-    //   ...users,
-    //   {
-    //     id: Math.random(),
-    //     name: inputName.current.value,
-    //     age: inputAge.current.value
-    //   }])
+    // setUsers([...users, newUser])
+
+    const {data: newUsers} = await axios.get("http://localhost:3001/users")
+
+    setUsers(newUsers)
   }
 
   const deleteUser = (userId) => {

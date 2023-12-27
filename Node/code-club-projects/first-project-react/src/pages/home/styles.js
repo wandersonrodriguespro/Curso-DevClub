@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Background from './assets/background1.svg'
+import Background from '../../assets/background1.svg'
 
 export const Container = styled.div`
     background: url("${Background}");
@@ -65,7 +65,7 @@ export const Btn = styled.button`
     height: 74px;
     flex-shrink: 0;
     border: none;
-    /* margin-top: 132px; */
+    margin-top: 130px;
 
     color: #FFF;
     font-size: 17px;
@@ -84,41 +84,6 @@ export const Btn = styled.button`
 
     &:active {
         opacity: .5;
-    }
-`;
-
-export const User = styled.li `
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 58px;
-    margin-top: 28px;
-
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 15px 20px 15px 25px;
-    
-    border: none;
-    outline: none;
-
-    .infoUser {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 75%;
-    }
-    
-    p{
-        color: #FFF;
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    button {
-        background: none;
-        border: none;
-        cursor: pointer;
     }
 `
 

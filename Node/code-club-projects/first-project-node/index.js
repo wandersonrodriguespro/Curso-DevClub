@@ -57,7 +57,8 @@ app.post('/users', (request, response) => {
 
         return response.status(201).json(user)
     } catch (err) {
-        return response.status(500).json({ error: err.message })
+        return response.status(500).json({ error: err.message });
+        
     } finally {
         console.log('terminou de adicionar')
     } // FInally é opcional

@@ -1,14 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import People from '../../assets/people.svg'
-import Arrow from '../../assets/arrow.svg'
+import People from '../../assets/people.svg';
+import Arrow from '../../assets/arrow.svg';
+
+import H1 from '../../components/title'
 
 import {
   Container,
   Img,
   ContainerItens,
-  H1,
   InputLabel,
   Input,
   Btn,
@@ -40,7 +41,7 @@ const App = () => {
 
       <ContainerItens>
 
-        <H1>Olá</H1>
+        <H1 >Olá</H1>
 
         <InputLabel>Nome</InputLabel>
         <Input ref={inputName} placeholder="Nome" />

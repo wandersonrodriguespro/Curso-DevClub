@@ -25,13 +25,7 @@ export const ContainerItens = styled.div`
     flex: auto;
 `;
 
-export const H1 = styled.h1`
-    color: #FFF;
-    text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 80px;
-`;
+
 
 export const InputLabel = styled.p`
     color: #EEE;

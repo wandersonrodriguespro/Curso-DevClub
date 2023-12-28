@@ -5,11 +5,11 @@ import People from '../../assets/people.svg';
 import Arrow from '../../assets/arrow.svg';
 
 import H1 from '../../components/title'
+import ContainerItens from '../../components/containerItens';
 
 import {
   Container,
   Img,
-  ContainerItens,
   InputLabel,
   Input,
   Btn,

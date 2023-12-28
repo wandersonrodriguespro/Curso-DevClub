@@ -16,32 +16,6 @@ export const Img = styled.img`
     margin-top: 30px;
 `;
 
-export const ContainerItens = styled.div`
-    border-radius: 61px 61px 0px 0px;
-    background: linear-gradient(
-        157deg,
-        #ffffff99 0.84%,
-        #ffffff99 0.85%,
-        #ffffff26 100%
-    );
-    backdrop-filter: blur(45px);
-
-    padding: 50px 36px;
-    
-    display: flex;
-    flex-direction: column;
-    flex: auto;
-
-`;
-
-export const H1 = styled.h1`
-    color: #FFF;
-    text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 80px;
-`;
-
 export const Btn = styled.button`
     border-radius: 14px;
     background: transparent;

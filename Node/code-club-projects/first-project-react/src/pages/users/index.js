@@ -4,12 +4,12 @@ import axios from 'axios';
 import Avatar from '../../assets/avatar.svg'
 import Trash from '../../assets/trash.svg'
 import Arrow from '../../assets/arrow.svg'
+import H1 from '../../components/title'
+import ContainerItens from '../../components/containerItens';
 
 import {
   Container,
   Img,
-  ContainerItens,
-  H1,
   Btn,
   User
 } from './styles';
@@ -34,9 +34,9 @@ const Users = () => {
 
 
 
-  async function deleteUser (userId) {
+  async function deleteUser(userId) {
     await axios.delete(`http://localhost:3001/users/${userId}`)
-    
+
     const newUsers = users.filter(user => user.id !== userId)
 
     setUsers(newUsers)
@@ -51,11 +51,10 @@ const Users = () => {
     <Container>
       <Img alt='logo-image' src={Avatar} />
 
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
 
         <H1>Usuários</H1>
 
-        
         <ul>
           {
             users.map(user => (

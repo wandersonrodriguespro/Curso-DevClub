@@ -6,13 +6,13 @@ import Arrow from '../../assets/arrow.svg';
 
 import H1 from '../../components/title'
 import ContainerItens from '../../components/containerItens';
+import { Button } from '../../components/button/styles';
 
 import {
   Container,
   Img,
   InputLabel,
   Input,
-  Btn,
 } from './styles';
 
 // JSX
@@ -49,10 +49,10 @@ const App = () => {
         <InputLabel>Idade</InputLabel>
         <Input ref={inputAge} placeholder="Idade" />
 
-        <Btn onClick={addNewUser}>
+        <Button onClick={addNewUser}>
           Cadastrar
           <img alt='seta' src={Arrow}></img>
-        </Btn>
+        </Button>
 
       </ContainerItens>
     </Container>

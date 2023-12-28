@@ -6,11 +6,11 @@ import Trash from '../../assets/trash.svg'
 import Arrow from '../../assets/arrow.svg'
 import H1 from '../../components/title'
 import ContainerItens from '../../components/containerItens';
+import { Button } from '../../components/button/styles';
 
 import {
   Container,
   Img,
-  Btn,
   User
 } from './styles';
 
@@ -71,10 +71,10 @@ const Users = () => {
           }
         </ul>
 
-        <Btn onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
           <img alt='seta' src={Arrow}></img>
           Voltar
-        </Btn>
+        </Button>
 
       </ContainerItens>
     </Container>

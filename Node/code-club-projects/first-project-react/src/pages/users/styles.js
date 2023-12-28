@@ -16,40 +16,6 @@ export const Img = styled.img`
     margin-top: 30px;
 `;
 
-export const Btn = styled.button`
-    border-radius: 14px;
-    background: transparent;
-    width: 342px;
-    height: 74px;
-    flex-shrink: 0;
-    border: 1px solid #ffffff;
-    margin-top: 130px;
-    
-
-    color: #FFF;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 28px;
-    cursor: pointer;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    &:hover {
-        opacity: .8;
-    }
-
-    &:active {
-        opacity: .5;
-    }
-
-    img {
-        transform: rotateY(180deg);
-    }
-`;
-
 export const User = styled.li `
     display: flex;
     justify-content: space-between;

@@ -40,37 +40,3 @@ export const Input = styled.input`
 
     margin-bottom: 25px;
 `;
-
-export const Btn = styled.button`
-    border-radius: 14px;
-    background: var(--Templates-5-Color-1, rgba(0, 0, 0, 0.80));
-    width: 342px;
-    height: 74px;
-    flex-shrink: 0;
-    border: none;
-    margin-top: 130px;
-
-    color: #FFF;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 28px;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    &:hover {
-        opacity: .8;
-    }
-
-    &:active {
-        opacity: .5;
-    }
-`
-
-
-
-
-

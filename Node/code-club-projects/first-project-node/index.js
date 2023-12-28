@@ -59,9 +59,10 @@ app.post('/users', (request, response) => {
     } catch (err) {
         return response.status(500).json({ error: err.message });
         
-    } finally {
-        console.log('terminou de adicionar')
-    } // FInally é opcional
+    } 
+    // finally {
+    //     console.log('terminou de adicionar')
+    // } // FInally é opcional
 })
 
 

@@ -34,17 +34,12 @@ app.post('/orders/create', (request, response) => {
     return response.status(201).json(pedido)
 })
 
-
 app.delete('/orders/delete/:id', chechOrderId, (request, response) => {
     const index = request.orderIndex
 
     orders.splice(index, 1)
     return response.status(204).json()
 })
-
-
-
-
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);

@@ -7,7 +7,7 @@ export const Button = styled.button`
     padding: 0px 113px;
     justify-content: center;
     align-items: center;
-    background: #D93856;
+    background: ${props => props.isBack ? 'rgba(255, 255, 255, 0.14)' : '#D93856'}; 
     margin-bottom: 51px;
     margin-top: 40px;
     border: none;

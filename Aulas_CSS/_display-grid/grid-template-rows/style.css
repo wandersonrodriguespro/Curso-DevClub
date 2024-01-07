@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr; /* Divide por fração */
+  grid-template-rows: 1fr 1fr 1fr; /* define o tamanho das linhas */
+}
+
+.space {
+  color: white;
+  font-size: 30px;
+}
+
+.one {
+  background: #333453;
+}
+
+.two {
+  background: #259b11;
+}
+
+.three {
+  background: #800534;
+}
+
+.four {
+  background: #0c8f9b;
+}
+
+.five {
+  background: #ff0a0a;
+}
+
+.six {
+  background: #717075;
+}
+
+.seven {
+  background: #3b11e2;
+}
+
+.eigth {
+  background: #933ba5;
+}
+
+.nine {
+  background: #6de26d;
+}
